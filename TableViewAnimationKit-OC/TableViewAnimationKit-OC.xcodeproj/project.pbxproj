@@ -15,6 +15,7 @@
 		2EE3CC301F14CCD0005A20E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EE3CC2E1F14CCD0005A20E0 /* LaunchScreen.storyboard */; };
 		2EE3CC3B1F14CCD0005A20E0 /* TableViewAnimationKit_OCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3CC3A1F14CCD0005A20E0 /* TableViewAnimationKit_OCTests.m */; };
 		2EE3CC461F14CCD0005A20E0 /* TableViewAnimationKit_OCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3CC451F14CCD0005A20E0 /* TableViewAnimationKit_OCUITests.m */; };
+		2EE3CC551F14D07B005A20E0 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3CC541F14D07B005A20E0 /* BaseTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		2EE3CC411F14CCD0005A20E0 /* TableViewAnimationKit-OCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TableViewAnimationKit-OCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EE3CC451F14CCD0005A20E0 /* TableViewAnimationKit_OCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewAnimationKit_OCUITests.m; sourceTree = "<group>"; };
 		2EE3CC471F14CCD0005A20E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EE3CC531F14D07B005A20E0 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		2EE3CC541F14D07B005A20E0 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				2EE3CC241F14CCD0005A20E0 /* AppDelegate.m */,
 				2EE3CC261F14CCD0005A20E0 /* ViewController.h */,
 				2EE3CC271F14CCD0005A20E0 /* ViewController.m */,
+				2EE3CC531F14D07B005A20E0 /* BaseTableViewController.h */,
+				2EE3CC541F14D07B005A20E0 /* BaseTableViewController.m */,
 				2EE3CC291F14CCD0005A20E0 /* Main.storyboard */,
 				2EE3CC2C1F14CCD0005A20E0 /* Assets.xcassets */,
 				2EE3CC2E1F14CCD0005A20E0 /* LaunchScreen.storyboard */,
@@ -276,6 +281,7 @@
 			files = (
 				2EE3CC281F14CCD0005A20E0 /* ViewController.m in Sources */,
 				2EE3CC251F14CCD0005A20E0 /* AppDelegate.m in Sources */,
+				2EE3CC551F14D07B005A20E0 /* BaseTableViewController.m in Sources */,
 				2EE3CC221F14CCD0005A20E0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +433,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GD7D5R7GD4;
 				INFOPLIST_FILE = "TableViewAnimationKit-OC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.tql.TableViewAnimationKit-OC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,6 +446,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GD7D5R7GD4;
 				INFOPLIST_FILE = "TableViewAnimationKit-OC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.tql.TableViewAnimationKit-OC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -510,6 +518,7 @@
 				2EE3CC4C1F14CCD0005A20E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EE3CC4D1F14CCD0005A20E0 /* Build configuration list for PBXNativeTarget "TableViewAnimationKit-OCTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +527,7 @@
 				2EE3CC4F1F14CCD0005A20E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EE3CC501F14CCD0005A20E0 /* Build configuration list for PBXNativeTarget "TableViewAnimationKit-OCUITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +536,7 @@
 				2EE3CC521F14CCD0005A20E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

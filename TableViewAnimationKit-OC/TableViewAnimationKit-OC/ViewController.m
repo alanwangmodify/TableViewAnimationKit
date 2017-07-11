@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "BaseTableViewController.h"
 
 @interface ViewController ()
 
@@ -16,13 +17,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    UIButton *btn = [[UIButton alloc] init];
+    btn.frame = CGRectMake(100, 200, 80, 80);
+    btn.backgroundColor = [UIColor redColor];
+    [btn addTarget:self action:@selector(toTableViewVC) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+}
+
+- (void)toTableViewVC {
+    BaseTableViewController *vc = [[BaseTableViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
