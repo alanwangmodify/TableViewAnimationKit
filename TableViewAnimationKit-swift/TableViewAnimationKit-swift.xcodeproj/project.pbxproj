@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2EE3CBE71F14CCBA005A20E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3CBE61F14CCBA005A20E0 /* AppDelegate.swift */; };
+		2EE3CBE91F14CCBA005A20E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3CBE81F14CCBA005A20E0 /* ViewController.swift */; };
+		2EE3CBEC1F14CCBA005A20E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EE3CBEA1F14CCBA005A20E0 /* Main.storyboard */; };
+		2EE3CBEE1F14CCBA005A20E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EE3CBED1F14CCBA005A20E0 /* Assets.xcassets */; };
+		2EE3CBF11F14CCBA005A20E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EE3CBEF1F14CCBA005A20E0 /* LaunchScreen.storyboard */; };
+		2EE3CBFC1F14CCBA005A20E0 /* TableViewAnimationKit_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3CBFB1F14CCBA005A20E0 /* TableViewAnimationKit_swiftTests.swift */; };
+		2EE3CC071F14CCBA005A20E0 /* TableViewAnimationKit_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3CC061F14CCBA005A20E0 /* TableViewAnimationKit_swiftUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2EE3CBF81F14CCBA005A20E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2EE3CBDB1F14CCBA005A20E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2EE3CBE21F14CCBA005A20E0;
+			remoteInfo = "TableViewAnimationKit-swift";
+		};
+		2EE3CC031F14CCBA005A20E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2EE3CBDB1F14CCBA005A20E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2EE3CBE21F14CCBA005A20E0;
+			remoteInfo = "TableViewAnimationKit-swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2EE3CBE31F14CCBA005A20E0 /* TableViewAnimationKit-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TableViewAnimationKit-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EE3CBE61F14CCBA005A20E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2EE3CBE81F14CCBA005A20E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2EE3CBEB1F14CCBA005A20E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2EE3CBED1F14CCBA005A20E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2EE3CBF01F14CCBA005A20E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2EE3CBF21F14CCBA005A20E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EE3CBF71F14CCBA005A20E0 /* TableViewAnimationKit-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TableViewAnimationKit-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EE3CBFB1F14CCBA005A20E0 /* TableViewAnimationKit_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAnimationKit_swiftTests.swift; sourceTree = "<group>"; };
+		2EE3CBFD1F14CCBA005A20E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EE3CC021F14CCBA005A20E0 /* TableViewAnimationKit-swiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TableViewAnimationKit-swiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EE3CC061F14CCBA005A20E0 /* TableViewAnimationKit_swiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAnimationKit_swiftUITests.swift; sourceTree = "<group>"; };
+		2EE3CC081F14CCBA005A20E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2EE3CBE01F14CCBA005A20E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EE3CBF41F14CCBA005A20E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EE3CBFF1F14CCBA005A20E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EE3CBDA1F14CCBA005A20E0 = {
+			isa = PBXGroup;
+			children = (
+				2EE3CBE51F14CCBA005A20E0 /* TableViewAnimationKit-swift */,
+				2EE3CBFA1F14CCBA005A20E0 /* TableViewAnimationKit-swiftTests */,
+				2EE3CC051F14CCBA005A20E0 /* TableViewAnimationKit-swiftUITests */,
+				2EE3CBE41F14CCBA005A20E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2EE3CBE41F14CCBA005A20E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2EE3CBE31F14CCBA005A20E0 /* TableViewAnimationKit-swift.app */,
+				2EE3CBF71F14CCBA005A20E0 /* TableViewAnimationKit-swiftTests.xctest */,
+				2EE3CC021F14CCBA005A20E0 /* TableViewAnimationKit-swiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2EE3CBE51F14CCBA005A20E0 /* TableViewAnimationKit-swift */ = {
+			isa = PBXGroup;
+			children = (
+				2EE3CBE61F14CCBA005A20E0 /* AppDelegate.swift */,
+				2EE3CBE81F14CCBA005A20E0 /* ViewController.swift */,
+				2EE3CBEA1F14CCBA005A20E0 /* Main.storyboard */,
+				2EE3CBED1F14CCBA005A20E0 /* Assets.xcassets */,
+				2EE3CBEF1F14CCBA005A20E0 /* LaunchScreen.storyboard */,
+				2EE3CBF21F14CCBA005A20E0 /* Info.plist */,
+			);
+			path = "TableViewAnimationKit-swift";
+			sourceTree = "<group>";
+		};
+		2EE3CBFA1F14CCBA005A20E0 /* TableViewAnimationKit-swiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				2EE3CBFB1F14CCBA005A20E0 /* TableViewAnimationKit_swiftTests.swift */,
+				2EE3CBFD1F14CCBA005A20E0 /* Info.plist */,
+			);
+			path = "TableViewAnimationKit-swiftTests";
+			sourceTree = "<group>";
+		};
+		2EE3CC051F14CCBA005A20E0 /* TableViewAnimationKit-swiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2EE3CC061F14CCBA005A20E0 /* TableViewAnimationKit_swiftUITests.swift */,
+				2EE3CC081F14CCBA005A20E0 /* Info.plist */,
+			);
+			path = "TableViewAnimationKit-swiftUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2EE3CBE21F14CCBA005A20E0 /* TableViewAnimationKit-swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EE3CC0B1F14CCBA005A20E0 /* Build configuration list for PBXNativeTarget "TableViewAnimationKit-swift" */;
+			buildPhases = (
+				2EE3CBDF1F14CCBA005A20E0 /* Sources */,
+				2EE3CBE01F14CCBA005A20E0 /* Frameworks */,
+				2EE3CBE11F14CCBA005A20E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TableViewAnimationKit-swift";
+			productName = "TableViewAnimationKit-swift";
+			productReference = 2EE3CBE31F14CCBA005A20E0 /* TableViewAnimationKit-swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2EE3CBF61F14CCBA005A20E0 /* TableViewAnimationKit-swiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EE3CC0E1F14CCBA005A20E0 /* Build configuration list for PBXNativeTarget "TableViewAnimationKit-swiftTests" */;
+			buildPhases = (
+				2EE3CBF31F14CCBA005A20E0 /* Sources */,
+				2EE3CBF41F14CCBA005A20E0 /* Frameworks */,
+				2EE3CBF51F14CCBA005A20E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2EE3CBF91F14CCBA005A20E0 /* PBXTargetDependency */,
+			);
+			name = "TableViewAnimationKit-swiftTests";
+			productName = "TableViewAnimationKit-swiftTests";
+			productReference = 2EE3CBF71F14CCBA005A20E0 /* TableViewAnimationKit-swiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2EE3CC011F14CCBA005A20E0 /* TableViewAnimationKit-swiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EE3CC111F14CCBA005A20E0 /* Build configuration list for PBXNativeTarget "TableViewAnimationKit-swiftUITests" */;
+			buildPhases = (
+				2EE3CBFE1F14CCBA005A20E0 /* Sources */,
+				2EE3CBFF1F14CCBA005A20E0 /* Frameworks */,
+				2EE3CC001F14CCBA005A20E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2EE3CC041F14CCBA005A20E0 /* PBXTargetDependency */,
+			);
+			name = "TableViewAnimationKit-swiftUITests";
+			productName = "TableViewAnimationKit-swiftUITests";
+			productReference = 2EE3CC021F14CCBA005A20E0 /* TableViewAnimationKit-swiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2EE3CBDB1F14CCBA005A20E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = com.cn.fql;
+				TargetAttributes = {
+					2EE3CBE21F14CCBA005A20E0 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					2EE3CBF61F14CCBA005A20E0 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2EE3CBE21F14CCBA005A20E0;
+					};
+					2EE3CC011F14CCBA005A20E0 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2EE3CBE21F14CCBA005A20E0;
+					};
+				};
+			};
+			buildConfigurationList = 2EE3CBDE1F14CCBA005A20E0 /* Build configuration list for PBXProject "TableViewAnimationKit-swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2EE3CBDA1F14CCBA005A20E0;
+			productRefGroup = 2EE3CBE41F14CCBA005A20E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2EE3CBE21F14CCBA005A20E0 /* TableViewAnimationKit-swift */,
+				2EE3CBF61F14CCBA005A20E0 /* TableViewAnimationKit-swiftTests */,
+				2EE3CC011F14CCBA005A20E0 /* TableViewAnimationKit-swiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2EE3CBE11F14CCBA005A20E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EE3CBF11F14CCBA005A20E0 /* LaunchScreen.storyboard in Resources */,
+				2EE3CBEE1F14CCBA005A20E0 /* Assets.xcassets in Resources */,
+				2EE3CBEC1F14CCBA005A20E0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EE3CBF51F14CCBA005A20E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EE3CC001F14CCBA005A20E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2EE3CBDF1F14CCBA005A20E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EE3CBE91F14CCBA005A20E0 /* ViewController.swift in Sources */,
+				2EE3CBE71F14CCBA005A20E0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EE3CBF31F14CCBA005A20E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EE3CBFC1F14CCBA005A20E0 /* TableViewAnimationKit_swiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EE3CBFE1F14CCBA005A20E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EE3CC071F14CCBA005A20E0 /* TableViewAnimationKit_swiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2EE3CBF91F14CCBA005A20E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2EE3CBE21F14CCBA005A20E0 /* TableViewAnimationKit-swift */;
+			targetProxy = 2EE3CBF81F14CCBA005A20E0 /* PBXContainerItemProxy */;
+		};
+		2EE3CC041F14CCBA005A20E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2EE3CBE21F14CCBA005A20E0 /* TableViewAnimationKit-swift */;
+			targetProxy = 2EE3CC031F14CCBA005A20E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2EE3CBEA1F14CCBA005A20E0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EE3CBEB1F14CCBA005A20E0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2EE3CBEF1F14CCBA005A20E0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EE3CBF01F14CCBA005A20E0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2EE3CC091F14CCBA005A20E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2EE3CC0A1F14CCBA005A20E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2EE3CC0C1F14CCBA005A20E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "TableViewAnimationKit-swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.tql.TableViewAnimationKit-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2EE3CC0D1F14CCBA005A20E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "TableViewAnimationKit-swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.tql.TableViewAnimationKit-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		2EE3CC0F1F14CCBA005A20E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "TableViewAnimationKit-swiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.tql.TableViewAnimationKit-swiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TableViewAnimationKit-swift.app/TableViewAnimationKit-swift";
+			};
+			name = Debug;
+		};
+		2EE3CC101F14CCBA005A20E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "TableViewAnimationKit-swiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.tql.TableViewAnimationKit-swiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TableViewAnimationKit-swift.app/TableViewAnimationKit-swift";
+			};
+			name = Release;
+		};
+		2EE3CC121F14CCBA005A20E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "TableViewAnimationKit-swiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.tql.TableViewAnimationKit-swiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "TableViewAnimationKit-swift";
+			};
+			name = Debug;
+		};
+		2EE3CC131F14CCBA005A20E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "TableViewAnimationKit-swiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.tql.TableViewAnimationKit-swiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "TableViewAnimationKit-swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2EE3CBDE1F14CCBA005A20E0 /* Build configuration list for PBXProject "TableViewAnimationKit-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EE3CC091F14CCBA005A20E0 /* Debug */,
+				2EE3CC0A1F14CCBA005A20E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EE3CC0B1F14CCBA005A20E0 /* Build configuration list for PBXNativeTarget "TableViewAnimationKit-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EE3CC0C1F14CCBA005A20E0 /* Debug */,
+				2EE3CC0D1F14CCBA005A20E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2EE3CC0E1F14CCBA005A20E0 /* Build configuration list for PBXNativeTarget "TableViewAnimationKit-swiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EE3CC0F1F14CCBA005A20E0 /* Debug */,
+				2EE3CC101F14CCBA005A20E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2EE3CC111F14CCBA005A20E0 /* Build configuration list for PBXNativeTarget "TableViewAnimationKit-swiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EE3CC121F14CCBA005A20E0 /* Debug */,
+				2EE3CC131F14CCBA005A20E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2EE3CBDB1F14CCBA005A20E0 /* Project object */;
+}
