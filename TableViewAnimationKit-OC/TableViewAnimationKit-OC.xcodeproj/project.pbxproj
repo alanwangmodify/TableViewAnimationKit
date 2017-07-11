@@ -16,6 +16,7 @@
 		2EE3CC3B1F14CCD0005A20E0 /* TableViewAnimationKit_OCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3CC3A1F14CCD0005A20E0 /* TableViewAnimationKit_OCTests.m */; };
 		2EE3CC461F14CCD0005A20E0 /* TableViewAnimationKit_OCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3CC451F14CCD0005A20E0 /* TableViewAnimationKit_OCUITests.m */; };
 		2EE3CC551F14D07B005A20E0 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3CC541F14D07B005A20E0 /* BaseTableViewController.m */; };
+		2EE3CC5B1F14DCF4005A20E0 /* TableViewAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3CC5A1F14DCF4005A20E0 /* TableViewAnimationKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		2EE3CC471F14CCD0005A20E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EE3CC531F14D07B005A20E0 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
 		2EE3CC541F14D07B005A20E0 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		2EE3CC591F14DCF4005A20E0 /* TableViewAnimationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewAnimationKit.h; sourceTree = "<group>"; };
+		2EE3CC5A1F14DCF4005A20E0 /* TableViewAnimationKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewAnimationKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				2EE3CC271F14CCD0005A20E0 /* ViewController.m */,
 				2EE3CC531F14D07B005A20E0 /* BaseTableViewController.h */,
 				2EE3CC541F14D07B005A20E0 /* BaseTableViewController.m */,
+				2EE3CC591F14DCF4005A20E0 /* TableViewAnimationKit.h */,
+				2EE3CC5A1F14DCF4005A20E0 /* TableViewAnimationKit.m */,
 				2EE3CC291F14CCD0005A20E0 /* Main.storyboard */,
 				2EE3CC2C1F14CCD0005A20E0 /* Assets.xcassets */,
 				2EE3CC2E1F14CCD0005A20E0 /* LaunchScreen.storyboard */,
@@ -282,6 +287,7 @@
 				2EE3CC281F14CCD0005A20E0 /* ViewController.m in Sources */,
 				2EE3CC251F14CCD0005A20E0 /* AppDelegate.m in Sources */,
 				2EE3CC551F14D07B005A20E0 /* BaseTableViewController.m in Sources */,
+				2EE3CC5B1F14DCF4005A20E0 /* TableViewAnimationKit.m in Sources */,
 				2EE3CC221F14CCD0005A20E0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

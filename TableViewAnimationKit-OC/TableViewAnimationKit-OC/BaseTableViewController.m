@@ -7,6 +7,7 @@
 //
 
 #import "BaseTableViewController.h"
+#import "TableViewAnimationKit.h"
 
 @interface BaseTableViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -74,18 +75,7 @@
 
 
 - (void)starAnimationWithTableView:(UITableView *)tableView {
-    
-    NSArray *cells = tableView.visibleCells;
-    for (int i = 0; i < cells.count; i++) {
-        UITableViewCell *cell = [tableView.visibleCells objectAtIndex:i];
-        cell.transform = CGAffineTransformMakeTranslation(-500, 0);
-        [UIView animateWithDuration:0.2 delay:i*0.035 options:0 animations:^{
-            cell.transform = CGAffineTransformIdentity;
-        } completion:^(BOOL finished) {
-            
-        }];
-    }
-    
+    [TableViewAnimationKit gravityAnimationWithTableView:tableView];
 }
 
 - (void)didReceiveMemoryWarning {
