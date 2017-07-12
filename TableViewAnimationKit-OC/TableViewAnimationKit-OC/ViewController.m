@@ -23,6 +23,19 @@
     btn.backgroundColor = [UIColor redColor];
     [btn addTarget:self action:@selector(toTableViewVC) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
+    
+    UIDynamicAnimator* animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    UIGravityBehavior* gravityBeahvior = [[UIGravityBehavior alloc] initWithItems:@[btn]];
+    [animator addBehavior:gravityBeahvior];
+    UICollisionBehavior* collisionBehavior = [[UICollisionBehavior alloc] initWithItems:@[btn]];
+    collisionBehavior.translatesReferenceBoundsIntoBoundary = YES;
+    [animator addBehavior:collisionBehavior];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
 }
 
 - (void)toTableViewVC {

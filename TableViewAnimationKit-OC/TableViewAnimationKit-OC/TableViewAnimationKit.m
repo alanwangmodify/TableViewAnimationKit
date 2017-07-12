@@ -48,14 +48,6 @@
  
     NSArray *cells = tableView.visibleCells;
     
-    
-//    UIDynamicAnimator* animator = [[UIDynamicAnimator alloc] initWithReferenceView:tableView];
-//    UIGravityBehavior* gravityBeahvior = [[UIGravityBehavior alloc] initWithItems:cells];
-//    [animator addBehavior:gravityBeahvior];
-//    UICollisionBehavior* collisionBehavior = [[UICollisionBehavior alloc] initWithItems:cells];
-//    collisionBehavior.translatesReferenceBoundsIntoBoundary = YES;
-//    [animator addBehavior:collisionBehavior];
-//    collisionBehavior.collisionDelegate = self;
     for (int i = 0; i < cells.count; i++) {
         UITableViewCell *cell = [tableView.visibleCells objectAtIndex:i];
         cell.transform = CGAffineTransformMakeTranslation(0, -800);
