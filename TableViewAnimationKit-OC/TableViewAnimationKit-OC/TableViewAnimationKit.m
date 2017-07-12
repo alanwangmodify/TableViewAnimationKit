@@ -8,6 +8,10 @@
 
 #import "TableViewAnimationKit.h"
 
+@interface TableViewAnimationKit ()
+
+@end
+
 @implementation TableViewAnimationKit
 
 
@@ -43,25 +47,28 @@
 + (void)gravityAnimationWithTableView:(UITableView *)tableView {
  
     NSArray *cells = tableView.visibleCells;
-    for (int i = 0; i < cells.count; i++) {
-        UITableViewCell *cell = [tableView.visibleCells objectAtIndex:i];
-        cell.transform = CGAffineTransformMakeRotation(i*20);
-    }
-    UIDynamicAnimator* animator = [[UIDynamicAnimator alloc] initWithReferenceView:tableView];
-    UIGravityBehavior* gravityBeahvior = [[UIGravityBehavior alloc] initWithItems:cells];
-    [animator addBehavior:gravityBeahvior];
-    UICollisionBehavior* collisionBehavior = [[UICollisionBehavior alloc] initWithItems:cells];
-    collisionBehavior.translatesReferenceBoundsIntoBoundary = YES;
-    [animator addBehavior:collisionBehavior];
+    
+    
+//    UIDynamicAnimator* animator = [[UIDynamicAnimator alloc] initWithReferenceView:tableView];
+//    UIGravityBehavior* gravityBeahvior = [[UIGravityBehavior alloc] initWithItems:cells];
+//    [animator addBehavior:gravityBeahvior];
+//    UICollisionBehavior* collisionBehavior = [[UICollisionBehavior alloc] initWithItems:cells];
+//    collisionBehavior.translatesReferenceBoundsIntoBoundary = YES;
+//    [animator addBehavior:collisionBehavior];
 //    collisionBehavior.collisionDelegate = self;
     for (int i = 0; i < cells.count; i++) {
         UITableViewCell *cell = [tableView.visibleCells objectAtIndex:i];
-        [UIView animateWithDuration:0.2 delay:i*0.035 options:0 animations:^{
+        cell.transform = CGAffineTransformMakeTranslation(0, -800);
+        [UIView animateWithDuration:0.3 delay:(cells.count - i)*0.2 options:0 animations:^{
+            cell.transform = CGAffineTransformIdentity;
         } completion:^(BOOL finished) {
             
         }];
     }
 }
 
-
+#pragma mark - Delegate
+- (void)collisionBehavior:(UICollisionBehavior *)behavior beganContactForItem:(id<UIDynamicItem>)item withBoundaryIdentifier:(id<NSCopying>)identifier atPoint:(CGPoint)p {
+    
+}
 @end
