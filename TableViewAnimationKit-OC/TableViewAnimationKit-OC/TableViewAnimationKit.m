@@ -101,12 +101,26 @@
         }];
         
     }
-
 }
+
 + (void)coverAnimationWithTableView:(UITableView *)tableView {
     
     
-    
+    NSArray *cells = tableView.visibleCells;
+    for (int i = 0; i < cells.count; i++) {
+        UITableViewCell *cell = [cells objectAtIndex:i];
+        cell.layer.opacity = 0.0;
+        cell.layer.transform = CATransform3DMakeRotation(M_PI, 1, 0, 0);
+        NSTimeInterval totalTime = 0.7;
+        CAShapeLayer *shaperLayer = [CAShapeLayer layer];
+        [UIView animateWithDuration:0.3 delay:i*(totalTime/cells.count) options:0 animations:^{
+            cell.layer.opacity = 1.0;
+            cell.layer.transform = CATransform3DIdentity;
+        } completion:^(BOOL finished) {
+            
+        }];
+        
+    }
     
     
     
