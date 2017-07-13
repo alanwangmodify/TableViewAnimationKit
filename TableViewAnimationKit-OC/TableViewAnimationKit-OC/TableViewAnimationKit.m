@@ -63,6 +63,7 @@
         }];
     }
 }
+
 + (void)shakeAnimationWithTableView:(UITableView *)tableView {
     
     NSArray *cells = tableView.visibleCells;
@@ -74,7 +75,7 @@
             cell.transform = CGAffineTransformMakeTranslation(XS_SCREEN_WIDTH,0);
         }
 
-        [UIView animateWithDuration:0.4 delay:i*0.035 options:0 animations:^{
+        [UIView animateWithDuration:0.4 delay:i*0.03 usingSpringWithDamping:0.75 initialSpringVelocity:1/0.75 options:0 animations:^{
             cell.transform = CGAffineTransformIdentity;
         } completion:^(BOOL finished) {
             
