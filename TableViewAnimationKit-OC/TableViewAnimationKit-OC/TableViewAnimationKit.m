@@ -9,6 +9,9 @@
 #import "TableViewAnimationKit.h"
 #import "XSGravityCollisionView.h"
 
+#define XS_SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
+#define XS_SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
+
 @interface TableViewAnimationKit ()
 
 @end
@@ -23,14 +26,13 @@
     NSArray *cells = tableView.visibleCells;
     for (int i = 0; i < cells.count; i++) {
         UITableViewCell *cell = [tableView.visibleCells objectAtIndex:i];
-        cell.transform = CGAffineTransformMakeTranslation(-500, 0);
+        cell.transform = CGAffineTransformMakeTranslation(-XS_SCREEN_WIDTH, 0);
         [UIView animateWithDuration:0.2 delay:i*0.035 options:0 animations:^{
             cell.transform = CGAffineTransformIdentity;
         } completion:^(BOOL finished) {
             
         }];
     }
-    
 }
 - (void)alphaAnimationWithTableView:(UITableView *)tableView {
     
@@ -53,7 +55,7 @@
     
     for (int i = 0; i < cells.count; i++) {
         UITableViewCell *cell = [tableView.visibleCells objectAtIndex:i];
-        cell.transform = CGAffineTransformMakeTranslation(0, -800);
+        cell.transform = CGAffineTransformMakeTranslation(0, - XS_SCREEN_HEIGHT);
         [UIView animateWithDuration:0.3 delay:(cells.count - i)*(totalTime/cells.count) options:0 animations:^{
             cell.transform = CGAffineTransformIdentity;
         } completion:^(BOOL finished) {
@@ -63,22 +65,22 @@
 }
 + (void)shakeAnimationWithTableView:(UITableView *)tableView {
     
-//    NSArray *cells = tableView.visibleCells;
-//    NSMutableArray *tempViews = [[NSMutableArray alloc] init];
-//    for (UIView *cell in cells) {
-//        UIView *snapView = [cell snapshotViewAfterScreenUpdates:YES];
-//        [tempViews addObject:snapView];
-//        cell.alpha = 0.0;
-//    }
-//    UIView *last = cells.lastObject;
-//    last.alpha = 1.0;
-//    
-//    UIView *first = cells.firstObject;
-//    first.alpha = 1.0;
-//    
-//    XSGravityCollisionView *baseView = [[XSGravityCollisionView alloc] init];
-//    baseView.itemViews = @[tableView];
-//    baseView.frame = tableView.superview.bounds;
+    NSArray *cells = tableView.visibleCells;
+    for (int i = 0; i < cells.count; i++) {
+        UITableViewCell *cell = [cells objectAtIndex:i];
+        if (i%2 == 0) {
+            cell.transform = CGAffineTransformMakeTranslation(-XS_SCREEN_WIDTH,0);
+        }else {
+            cell.transform = CGAffineTransformMakeTranslation(XS_SCREEN_WIDTH,0);
+        }
+
+        [UIView animateWithDuration:0.4 delay:i*0.035 options:0 animations:^{
+            cell.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            
+        }];
+    }
+
 }
 
 @end

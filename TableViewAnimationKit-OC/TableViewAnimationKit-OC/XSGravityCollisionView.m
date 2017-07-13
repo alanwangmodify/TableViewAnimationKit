@@ -18,10 +18,7 @@
     if (self = [super init]) {
         
         UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self];
-        
         self.animator = animator;
-        
-        
         
     }
     return self;
