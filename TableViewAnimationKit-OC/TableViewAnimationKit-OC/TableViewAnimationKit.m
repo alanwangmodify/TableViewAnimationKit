@@ -19,22 +19,22 @@
 @implementation TableViewAnimationKit
 
 
-
-
-- (void)starAnimationWithTableView:(UITableView *)tableView {
++ (void)moveAnimationWithTableView:(UITableView *)tableView {
     
     NSArray *cells = tableView.visibleCells;
     for (int i = 0; i < cells.count; i++) {
+        CGFloat totalTime = 0.4;
         UITableViewCell *cell = [tableView.visibleCells objectAtIndex:i];
         cell.transform = CGAffineTransformMakeTranslation(-XS_SCREEN_WIDTH, 0);
-        [UIView animateWithDuration:0.2 delay:i*0.035 options:0 animations:^{
+        [UIView animateWithDuration:0.4 delay:i*(totalTime/cells.count) usingSpringWithDamping:0.7 initialSpringVelocity:1/0.7 options:0 animations:^{
             cell.transform = CGAffineTransformIdentity;
         } completion:^(BOOL finished) {
             
         }];
     }
 }
-- (void)alphaAnimationWithTableView:(UITableView *)tableView {
+
++ (void)alphaAnimationWithTableView:(UITableView *)tableView {
     
     NSArray *cells = tableView.visibleCells;
     for (int i = 0; i < cells.count; i++) {
@@ -47,6 +47,8 @@
         }];
     }
 }
+
+
 + (void)fallAnimationWithTableView:(UITableView *)tableView {
  
     NSArray *cells = tableView.visibleCells;
@@ -64,6 +66,7 @@
     }
 }
 
+
 + (void)shakeAnimationWithTableView:(UITableView *)tableView {
     
     NSArray *cells = tableView.visibleCells;
@@ -74,14 +77,39 @@
         }else {
             cell.transform = CGAffineTransformMakeTranslation(XS_SCREEN_WIDTH,0);
         }
-
         [UIView animateWithDuration:0.4 delay:i*0.03 usingSpringWithDamping:0.75 initialSpringVelocity:1/0.75 options:0 animations:^{
             cell.transform = CGAffineTransformIdentity;
         } completion:^(BOOL finished) {
             
         }];
     }
-
 }
 
++ (void)overTurnAnimationWithTableView:(UITableView *)tableView {
+    
+    NSArray *cells = tableView.visibleCells;
+    for (int i = 0; i < cells.count; i++) {
+        UITableViewCell *cell = [cells objectAtIndex:i];
+        cell.layer.opacity = 0.0;
+        cell.layer.transform = CATransform3DMakeRotation(M_PI, 1, 0, 0);
+        NSTimeInterval totalTime = 0.7;
+        [UIView animateWithDuration:0.3 delay:i*(totalTime/cells.count) options:0 animations:^{
+            cell.layer.opacity = 1.0;
+            cell.layer.transform = CATransform3DIdentity;
+        } completion:^(BOOL finished) {
+            
+        }];
+        
+    }
+
+}
++ (void)coverAnimationWithTableView:(UITableView *)tableView {
+    
+    
+    
+    
+    
+    
+    
+}
 @end

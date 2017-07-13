@@ -11,8 +11,11 @@
 
 @interface TableViewAnimationKit : NSObject<UICollisionBehaviorDelegate>
 
-
++ (void)moveAnimationWithTableView:(UITableView *)tableView;
++ (void)alphaAnimationWithTableView:(UITableView *)tableView;
 + (void)fallAnimationWithTableView:(UITableView *)tableView;
 + (void)shakeAnimationWithTableView:(UITableView *)tableView;
++ (void)overTurnAnimationWithTableView:(UITableView *)tableView;
++ (void)coverAnimationWithTableView:(UITableView *)tableView;
 
 @end
