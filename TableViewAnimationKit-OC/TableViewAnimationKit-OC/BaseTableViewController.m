@@ -75,7 +75,7 @@
 
 
 - (void)starAnimationWithTableView:(UITableView *)tableView {
-    [TableViewAnimationKit gravityAnimationWithTableView:tableView];
+    [TableViewAnimationKit shakeAnimationWithTableView:tableView];
 }
 
 - (void)didReceiveMemoryWarning {

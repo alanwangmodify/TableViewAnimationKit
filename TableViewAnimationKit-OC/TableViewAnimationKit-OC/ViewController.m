@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "BaseTableViewController.h"
+#import "XSGravityCollisionView.h"
+
 
 @interface ViewController ()
 
@@ -19,17 +21,17 @@
     [super viewDidLoad];
     
     UIButton *btn = [[UIButton alloc] init];
-    btn.frame = CGRectMake(100, 200, 80, 80);
+    btn.frame = CGRectMake(150, 200, 80, 80);
+
     btn.backgroundColor = [UIColor redColor];
     [btn addTarget:self action:@selector(toTableViewVC) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
     
-    UIDynamicAnimator* animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
-    UIGravityBehavior* gravityBeahvior = [[UIGravityBehavior alloc] initWithItems:@[btn]];
-    [animator addBehavior:gravityBeahvior];
-    UICollisionBehavior* collisionBehavior = [[UICollisionBehavior alloc] initWithItems:@[btn]];
-    collisionBehavior.translatesReferenceBoundsIntoBoundary = YES;
-    [animator addBehavior:collisionBehavior];
+    
+    XSGravityCollisionView *baseView = [[XSGravityCollisionView alloc] init];
+    baseView.itemViews = @[btn];
+    baseView.frame = self.view.bounds;
+    [baseView starAnimation];
+    [self.view addSubview:baseView];
     
 }
 
