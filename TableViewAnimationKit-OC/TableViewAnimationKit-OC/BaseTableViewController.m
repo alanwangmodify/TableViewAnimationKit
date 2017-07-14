@@ -52,8 +52,20 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        
+        CGFloat width = [[UIScreen mainScreen] bounds].size.width - 40;
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(20, 10, width, 80)];
+        view.backgroundColor = [UIColor orangeColor];
+        view.layer.masksToBounds = YES;
+        view.layer.cornerRadius = 9.0;
+        view.alpha = 0.5;
+        
+        [cell.contentView addSubview:view];
+        cell.contentView.backgroundColor = [UIColor clearColor];
+        cell.backgroundColor = [UIColor clearColor];
+        
     }
-    cell.textLabel.text = @"test";
+    
     return cell;
 }
 
@@ -67,15 +79,15 @@
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     }
     return _tableView;
 }
 
 
 
-
 - (void)starAnimationWithTableView:(UITableView *)tableView {
-    [TableViewAnimationKit toTopAnimationWithTableView:tableView];
+    [TableViewAnimationKit moveAnimationWithTableView:tableView];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -26,7 +26,7 @@
         CGFloat totalTime = 0.4;
         UITableViewCell *cell = [tableView.visibleCells objectAtIndex:i];
         cell.transform = CGAffineTransformMakeTranslation(-XS_SCREEN_WIDTH, 0);
-        [UIView animateWithDuration:0.4 delay:i*(totalTime/cells.count) usingSpringWithDamping:0.7 initialSpringVelocity:1/0.7 options:0 animations:^{
+        [UIView animateWithDuration:0.4 delay:i*(totalTime/cells.count) usingSpringWithDamping:0.7 initialSpringVelocity:1/0.7 options:UIViewAnimationOptionCurveEaseIn animations:^{
             cell.transform = CGAffineTransformIdentity;
         } completion:^(BOOL finished) {
             
@@ -139,8 +139,9 @@
         }];
         
     }
-    
-    
+}
+
++ (void)centerPointShowAnimationWithTableView:(UITableView *)tableView {
     
     
 }
