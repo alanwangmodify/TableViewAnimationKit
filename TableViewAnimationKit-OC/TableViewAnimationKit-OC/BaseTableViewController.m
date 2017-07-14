@@ -87,7 +87,7 @@
 
 
 - (void)starAnimationWithTableView:(UITableView *)tableView {
-    [TableViewAnimationKit coverAnimationWithTableView:tableView];
+    [TableViewAnimationKit shrinkToTopAnimationWithTableView:tableView];
 }
 
 - (void)didReceiveMemoryWarning {
