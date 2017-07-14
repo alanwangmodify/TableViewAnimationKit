@@ -121,24 +121,27 @@
     }
 }
 
-+ (void)coverAnimationWithTableView:(UITableView *)tableView {
-    
++ (void)springListAnimationWithTableView:(UITableView *)tableView {
     
     NSArray *cells = tableView.visibleCells;
     for (int i = 0; i < cells.count; i++) {
         UITableViewCell *cell = [cells objectAtIndex:i];
-        cell.layer.opacity = 0.0;
-        cell.layer.transform = CATransform3DMakeRotation(M_PI, 1, 0, 0);
-        NSTimeInterval totalTime = 0.7;
-        CAShapeLayer *shaperLayer = [CAShapeLayer layer];
-        [UIView animateWithDuration:0.3 delay:i*(totalTime/cells.count) options:0 animations:^{
+        cell.layer.opacity = 0.7;
+        cell.layer.transform = CATransform3DMakeTranslation(0, -XS_SCREEN_HEIGHT, 20);
+        NSTimeInterval totalTime = 1.0;
+        
+        [UIView animateWithDuration:0.4 delay:i*(totalTime/cells.count) usingSpringWithDamping:0.65 initialSpringVelocity:1/0.65 options:UIViewAnimationOptionCurveEaseIn animations:^{
             cell.layer.opacity = 1.0;
-            cell.layer.transform = CATransform3DIdentity;
+            cell.layer.transform = CATransform3DMakeTranslation(0, 0, 20);
         } completion:^(BOOL finished) {
             
         }];
         
     }
+}
++ (void)coverAnimationWithTableView:(UITableView *)tableView {
+    
+    
 }
 
 + (void)centerPointShowAnimationWithTableView:(UITableView *)tableView {

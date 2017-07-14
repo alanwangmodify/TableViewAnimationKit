@@ -17,6 +17,7 @@
 + (void)shakeAnimationWithTableView:(UITableView *)tableView;
 + (void)overTurnAnimationWithTableView:(UITableView *)tableView;
 + (void)toTopAnimationWithTableView:(UITableView *)tableView;
++ (void)springListAnimationWithTableView:(UITableView *)tableView;
 + (void)coverAnimationWithTableView:(UITableView *)tableView;
 
 @end

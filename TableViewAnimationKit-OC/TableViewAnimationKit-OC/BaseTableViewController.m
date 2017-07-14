@@ -87,7 +87,7 @@
 
 
 - (void)starAnimationWithTableView:(UITableView *)tableView {
-    [TableViewAnimationKit moveAnimationWithTableView:tableView];
+    [TableViewAnimationKit coverAnimationWithTableView:tableView];
 }
 
 - (void)didReceiveMemoryWarning {
