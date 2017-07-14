@@ -16,6 +16,7 @@
 + (void)fallAnimationWithTableView:(UITableView *)tableView;
 + (void)shakeAnimationWithTableView:(UITableView *)tableView;
 + (void)overTurnAnimationWithTableView:(UITableView *)tableView;
++ (void)toTopAnimationWithTableView:(UITableView *)tableView;
 + (void)coverAnimationWithTableView:(UITableView *)tableView;
 
 @end

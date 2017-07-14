@@ -44,7 +44,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50;
+    return 100;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -75,7 +75,7 @@
 
 
 - (void)starAnimationWithTableView:(UITableView *)tableView {
-    [TableViewAnimationKit coverAnimationWithTableView:tableView];
+    [TableViewAnimationKit toTopAnimationWithTableView:tableView];
 }
 
 - (void)didReceiveMemoryWarning {

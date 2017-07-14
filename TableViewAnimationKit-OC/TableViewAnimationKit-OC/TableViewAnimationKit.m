@@ -103,6 +103,24 @@
     }
 }
 
++ (void)toTopAnimationWithTableView:(UITableView *)tableView {
+    
+    
+    NSArray *cells = tableView.visibleCells;
+    
+    NSTimeInterval totalTime = 0.8;
+    
+    for (int i = 0; i < cells.count; i++) {
+        UITableViewCell *cell = [tableView.visibleCells objectAtIndex:i];
+        cell.transform = CGAffineTransformMakeTranslation(0,  XS_SCREEN_HEIGHT);
+        [UIView animateWithDuration:0.35 delay:i*(totalTime/cells.count) options:UIViewAnimationOptionCurveEaseOut animations:^{
+            cell.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            
+        }];
+    }
+}
+
 + (void)coverAnimationWithTableView:(UITableView *)tableView {
     
     
