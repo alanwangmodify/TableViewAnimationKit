@@ -63,11 +63,11 @@
         [cell.contentView addSubview:view];
         cell.contentView.backgroundColor = [UIColor clearColor];
         cell.backgroundColor = [UIColor clearColor];
-        
     }
     
     return cell;
 }
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -88,16 +88,16 @@
 - (void)starAnimationWithTableView:(UITableView *)tableView {
     switch (self.index) {
         case 0:
-            [TableViewAnimationKit moveAnimationWithTableView:tableView];
+            [TableViewAnimationKit springListAnimationWithTableView:tableView];
             break;
         case 1:
-            [TableViewAnimationKit alphaAnimationWithTableView:tableView];
+            [TableViewAnimationKit shakeAnimationWithTableView:tableView];
             break;
         case 2:
             [TableViewAnimationKit fallAnimationWithTableView:tableView];
             break;
         case 3:
-            [TableViewAnimationKit shakeAnimationWithTableView:tableView];
+            [TableViewAnimationKit alphaAnimationWithTableView:tableView];
             break;
         case 4:
             [TableViewAnimationKit overTurnAnimationWithTableView:tableView];
@@ -106,7 +106,7 @@
             [TableViewAnimationKit toTopAnimationWithTableView:tableView];
             break;
         case 6:
-            [TableViewAnimationKit springListAnimationWithTableView:tableView];
+            [TableViewAnimationKit moveAnimationWithTableView:tableView];
             break;
         case 7:
             [TableViewAnimationKit shrinkToTopAnimationWithTableView:tableView];

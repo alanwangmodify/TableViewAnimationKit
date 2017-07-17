@@ -139,18 +139,7 @@
     }
 }
 
-+ (void)flipCellAnimationWithTableView:(UITableView *)tableView {
-    
-//    NSArray *cells = tableView.visibleCells;
-//    for (int i = 0; i < cells.count; i++) {
-//        UITableViewCell *cell = [cells objectAtIndex:i];
-//        CGRect rect = [cell convertRect:cell.bounds fromView:tableView];
-//        cell.transform = CGAffineTransformMakeTranslation(0, rect.origin.y);
-//        [UIView animateWithDuration:0.5 animations:^{
-//            cell.transform = CGAffineTransformIdentity;
-//        }];
-//    }
-}
+
 
 + (void)shrinkToTopAnimationWithTableView:(UITableView *)tableView {
     NSArray *cells = tableView.visibleCells;
@@ -163,6 +152,23 @@
         }];
     }
 }
+
+
+
++ (void)flipCellAnimationWithTableView:(UITableView *)tableView {
+    
+    //    NSArray *cells = tableView.visibleCells;
+    //    for (int i = 0; i < cells.count; i++) {
+    //        UITableViewCell *cell = [cells objectAtIndex:i];
+    //        CGRect rect = [cell convertRect:cell.bounds fromView:tableView];
+    //        cell.transform = CGAffineTransformMakeTranslation(0, rect.origin.y);
+    //        [UIView animateWithDuration:0.5 animations:^{
+    //            cell.transform = CGAffineTransformIdentity;
+    //        }];
+    //    }
+}
+
+
 + (void)centerPointShowAnimationWithTableView:(UITableView *)tableView {
     
     

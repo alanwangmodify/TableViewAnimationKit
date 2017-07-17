@@ -23,21 +23,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIButton *btn = [[UIButton alloc] init];
-    btn.frame = CGRectMake(150, 200, 80, 80);
-
-    btn.backgroundColor = [UIColor redColor];
-    [btn addTarget:self action:@selector(toTableViewVC) forControlEvents:UIControlEventTouchUpInside];
-    
-    _titles = @[@"",@"",@""];
+//    UIButton *btn = [[UIButton alloc] init];
+//    btn.frame = CGRectMake(150, 200, 80, 80);
+//
+//    btn.backgroundColor = [UIColor redColor];
+//    [btn addTarget:self action:@selector(toTableViewVC) forControlEvents:UIControlEventTouchUpInside];
+//    
+    _titles = @[@"move",@"",@""];
     [self.view addSubview:self.tableView];
     
-    XSGravityCollisionView *baseView = [[XSGravityCollisionView alloc] init];
-    baseView.itemViews = @[btn];
-    baseView.frame = self.view.bounds;
-    [baseView starAnimation];
-    [self.view addSubview:baseView];
-    
+//    XSGravityCollisionView *baseView = [[XSGravityCollisionView alloc] init];
+//    baseView.itemViews = @[btn];
+//    baseView.frame = self.view.bounds;
+//    [baseView starAnimation];
+//    [self.view addSubview:baseView];
+//    
 }
 #pragma mark  - Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
