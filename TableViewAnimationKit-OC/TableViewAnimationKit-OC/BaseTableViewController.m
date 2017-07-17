@@ -58,8 +58,6 @@
         view.backgroundColor = [UIColor orangeColor];
         view.layer.masksToBounds = YES;
         view.layer.cornerRadius = 9.0;
-        view.alpha = 0.5;
-        
         [cell.contentView addSubview:view];
         cell.contentView.backgroundColor = [UIColor clearColor];
         cell.backgroundColor = [UIColor clearColor];
@@ -71,7 +69,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self starAnimationWithTableView:self.tableView];
 }
 #pragma mark - Getter
 -(UITableView *)tableView {
@@ -106,12 +103,13 @@
             [TableViewAnimationKit toTopAnimationWithTableView:tableView];
             break;
         case 6:
-            [TableViewAnimationKit moveAnimationWithTableView:tableView];
+            [TableViewAnimationKit layDonwAnimationWithTableView:tableView];
             break;
         case 7:
             [TableViewAnimationKit shrinkToTopAnimationWithTableView:tableView];
             break;
-            
+        case 8:
+            break;
         default:
             break;
     }

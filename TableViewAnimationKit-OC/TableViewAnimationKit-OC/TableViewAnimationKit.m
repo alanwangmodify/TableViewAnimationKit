@@ -153,11 +153,35 @@
     }
 }
 
++ (void)layDonwAnimationWithTableView:(UITableView *)tableView {
+    NSArray *cells = tableView.visibleCells;
+    NSMutableArray *rectArr = [[NSMutableArray alloc] init];
+    for (int i = 0; i < cells.count; i++) {
+        UITableViewCell *cell = [cells objectAtIndex:i];
+        CGRect rect = cell.frame;
+        [rectArr addObject:[NSValue valueWithCGRect:rect]];
+        rect.origin.y = i * 10;
+        cell.frame = rect;
+        cell.layer.transform = CATransform3DMakeTranslation(0, 0, i*5);
+    }
+    
+    for (int i = 0; i < cells.count; i++) {
+        UITableViewCell *cell = [cells objectAtIndex:i];
+        CGRect rect = [[rectArr objectAtIndex:i] CGRectValue];
+        [UIView animateWithDuration:0.2 * i animations:^{
+            cell.frame = rect;
+        } completion:^(BOOL finished) {
+            cell.layer.transform = CATransform3DIdentity;
+        }];
+    }
+    
+}
 
 
 + (void)flipCellAnimationWithTableView:(UITableView *)tableView {
     
-    //    NSArray *cells = tableView.visibleCells;
+//        NSArray *cells = tableView.visibleCells;
+    
     //    for (int i = 0; i < cells.count; i++) {
     //        UITableViewCell *cell = [cells objectAtIndex:i];
     //        CGRect rect = [cell convertRect:cell.bounds fromView:tableView];
@@ -170,6 +194,7 @@
 
 
 + (void)centerPointShowAnimationWithTableView:(UITableView *)tableView {
+    
     
     
 }
