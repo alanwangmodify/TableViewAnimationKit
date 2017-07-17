@@ -85,9 +85,36 @@
 }
 
 
-
 - (void)starAnimationWithTableView:(UITableView *)tableView {
-    [TableViewAnimationKit shrinkToTopAnimationWithTableView:tableView];
+    switch (self.index) {
+        case 0:
+            [TableViewAnimationKit moveAnimationWithTableView:tableView];
+            break;
+        case 1:
+            [TableViewAnimationKit alphaAnimationWithTableView:tableView];
+            break;
+        case 2:
+            [TableViewAnimationKit fallAnimationWithTableView:tableView];
+            break;
+        case 3:
+            [TableViewAnimationKit shakeAnimationWithTableView:tableView];
+            break;
+        case 4:
+            [TableViewAnimationKit overTurnAnimationWithTableView:tableView];
+            break;
+        case 5:
+            [TableViewAnimationKit toTopAnimationWithTableView:tableView];
+            break;
+        case 6:
+            [TableViewAnimationKit springListAnimationWithTableView:tableView];
+            break;
+        case 7:
+            [TableViewAnimationKit shrinkToTopAnimationWithTableView:tableView];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

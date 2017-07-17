@@ -10,4 +10,7 @@
 
 @interface BaseTableViewController : UIViewController
 
+@property (nonatomic, assign) NSInteger index;
+
+
 @end

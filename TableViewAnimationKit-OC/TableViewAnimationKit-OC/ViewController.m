@@ -11,7 +11,10 @@
 #import "XSGravityCollisionView.h"
 
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic, strong) NSArray *titles;
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -26,6 +29,8 @@
     btn.backgroundColor = [UIColor redColor];
     [btn addTarget:self action:@selector(toTableViewVC) forControlEvents:UIControlEventTouchUpInside];
     
+    _titles = @[@"",@"",@""];
+    [self.view addSubview:self.tableView];
     
     XSGravityCollisionView *baseView = [[XSGravityCollisionView alloc] init];
     baseView.itemViews = @[btn];
@@ -34,15 +39,42 @@
     [self.view addSubview:baseView];
     
 }
-
+#pragma mark  - Delegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _titles.count;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    BaseTableViewController *vc = [[BaseTableViewController alloc] init];
+    vc.index = indexPath.row;
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *identifier = @"identifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
+    }
+    return cell;
+    
+}
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
 }
 
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+    }
+    return _tableView;
+}
+
 - (void)toTableViewVC {
-    BaseTableViewController *vc = [[BaseTableViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+ 
 }
 
 
