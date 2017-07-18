@@ -20,5 +20,6 @@
 + (void)springListAnimationWithTableView:(UITableView *)tableView;
 + (void)shrinkToTopAnimationWithTableView:(UITableView *)tableView;
 + (void)layDonwAnimationWithTableView:(UITableView *)tableView;
++ (void)roteAnimationWithTableView:(UITableView *)tableView;
 
 @end

@@ -164,11 +164,11 @@
         cell.frame = rect;
         cell.layer.transform = CATransform3DMakeTranslation(0, 0, i*5);
     }
-    
+    NSTimeInterval totalTime = 0.8;
     for (int i = 0; i < cells.count; i++) {
         UITableViewCell *cell = [cells objectAtIndex:i];
         CGRect rect = [[rectArr objectAtIndex:i] CGRectValue];
-        [UIView animateWithDuration:0.2 * i animations:^{
+        [UIView animateWithDuration:(totalTime/cells.count) * i animations:^{
             cell.frame = rect;
         } completion:^(BOOL finished) {
             cell.layer.transform = CATransform3DIdentity;
@@ -192,7 +192,24 @@
     //    }
 }
 
++ (void)roteAnimationWithTableView:(UITableView *)tableView {
+    
+    NSArray *cells = tableView.visibleCells;
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.y"];
+    animation.fromValue = (id) 0;
+    animation.toValue = @(M_PI*2);
+    animation.duration = 0.3;
+    animation.removedOnCompletion = NO;
+    animation.repeatCount = 8;
+    animation.fillMode = kCAFillModeForwards;
+    animation.autoreverses = NO;
+    
 
+    for (int i = 0; i < cells.count; i++) {
+        UITableViewCell *cell = [cells objectAtIndex:i];
+        [cell.layer addAnimation:animation forKey:@"key"];
+    }
+}
 + (void)centerPointShowAnimationWithTableView:(UITableView *)tableView {
     
     

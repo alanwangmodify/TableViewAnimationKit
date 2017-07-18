@@ -109,6 +109,7 @@
             [TableViewAnimationKit shrinkToTopAnimationWithTableView:tableView];
             break;
         case 8:
+            [TableViewAnimationKit roteAnimationWithTableView:tableView];
             break;
         default:
             break;

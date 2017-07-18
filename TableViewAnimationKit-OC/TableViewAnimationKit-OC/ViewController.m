@@ -35,7 +35,7 @@
 //    [baseView starAnimation];
 //    [self.view addSubview:baseView];
 
-    _titles = @[@"1",@"2",@"3",@"4",@"5",@"6",@"lay",@""];
+    _titles = @[@"1",@"2",@"3",@"4",@"5",@"6",@"lay",@"8",@"9"];
     [self.view addSubview:self.tableView];
     
 }
