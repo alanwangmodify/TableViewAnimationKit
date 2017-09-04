@@ -186,14 +186,13 @@
     
     NSArray *cells = tableView.visibleCells;
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.y"];
-    animation.fromValue = (id) 0;
-    animation.toValue = @(M_PI*2);
+    animation.fromValue = @(-M_PI);
+    animation.toValue = 0;
     animation.duration = 0.3;
     animation.removedOnCompletion = NO;
-    animation.repeatCount = 8;
+    animation.repeatCount = 1;
     animation.fillMode = kCAFillModeForwards;
     animation.autoreverses = NO;
-    
 
     for (int i = 0; i < cells.count; i++) {
         UITableViewCell *cell = [cells objectAtIndex:i];
