@@ -198,13 +198,12 @@
         [UIView animateWithDuration:0.1 delay:i*0.25 options:0 animations:^{
             cell.alpha = 1.0;
         } completion:^(BOOL finished) {
-            [cell.layer addAnimation:animation forKey:@"key"];
+            [cell.layer addAnimation:animation forKey:@"rotationYkey"];
         }];
     }
 }
 
 + (void)centerPointShowAnimationWithTableView:(UITableView *)tableView {
-    
     
     
 }

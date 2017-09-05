@@ -118,7 +118,11 @@
         case 8:
             [TableViewAnimationKit roteAnimationWithTableView:tableView];
             break;
+        case 9:
+            [TableViewAnimationKit moveAnimationWithTableView:tableView];
+            break;
         default:
+            [TableViewAnimationKit moveAnimationWithTableView:tableView];
             break;
     }
 }
