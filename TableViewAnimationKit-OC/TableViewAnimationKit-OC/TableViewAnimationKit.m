@@ -201,7 +201,6 @@
             [cell.layer addAnimation:animation forKey:@"key"];
         }];
     }
-    
 
 }
 + (void)centerPointShowAnimationWithTableView:(UITableView *)tableView {

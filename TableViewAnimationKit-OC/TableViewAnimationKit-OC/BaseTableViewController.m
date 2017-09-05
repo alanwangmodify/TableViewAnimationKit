@@ -23,6 +23,12 @@
     self.view.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.tableView];
     [self performSelector:@selector(loadData) withObject:nil afterDelay:0.5];
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0, 0, 200, 50);
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btn setTitle:@"Show Again" forState:UIControlStateNormal];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
 }
 
 - (void)loadData {
