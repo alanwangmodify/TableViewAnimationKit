@@ -35,7 +35,7 @@
 //    [baseView starAnimation];
 //    [self.view addSubview:baseView];
 
-    _titles = @[@"1",@"2",@"3",@"4",@"5",@"6",@"lay",@"8",@"9",@"10",@"11"];
+    _titles = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10"];
     [self.view addSubview:self.tableView];
     
 }
@@ -56,6 +56,10 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
     }
+    if (_titles.count > indexPath.row) {
+        cell.textLabel.text = _titles[indexPath.row];
+    }
+    
     return cell;
     
 }
