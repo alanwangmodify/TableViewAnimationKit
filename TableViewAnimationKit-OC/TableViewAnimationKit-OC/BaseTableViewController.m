@@ -30,7 +30,11 @@
     [btn setTitle:@"Show Again" forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     [btn addTarget:self action:@selector(loadData) forControlEvents:UIControlEventTouchUpInside];
+
+    NSString *stri = nil;
+     [stri stringByReplacingOccurrencesOfString:@" " withString:@""];
 }
+
 
 - (void)loadData {
     

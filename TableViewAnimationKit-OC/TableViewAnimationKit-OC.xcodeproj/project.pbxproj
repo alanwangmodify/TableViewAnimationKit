@@ -17,7 +17,6 @@
 		2EE3CC461F14CCD0005A20E0 /* TableViewAnimationKit_OCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3CC451F14CCD0005A20E0 /* TableViewAnimationKit_OCUITests.m */; };
 		2EE3CC551F14D07B005A20E0 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3CC541F14D07B005A20E0 /* BaseTableViewController.m */; };
 		2EE3CC5B1F14DCF4005A20E0 /* TableViewAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3CC5A1F14DCF4005A20E0 /* TableViewAnimationKit.m */; };
-		2EE3CC791F172523005A20E0 /* XSGravityCollisionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3CC781F172523005A20E0 /* XSGravityCollisionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +57,6 @@
 		2EE3CC541F14D07B005A20E0 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		2EE3CC591F14DCF4005A20E0 /* TableViewAnimationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewAnimationKit.h; sourceTree = "<group>"; };
 		2EE3CC5A1F14DCF4005A20E0 /* TableViewAnimationKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewAnimationKit.m; sourceTree = "<group>"; };
-		2EE3CC771F172523005A20E0 /* XSGravityCollisionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSGravityCollisionView.h; sourceTree = "<group>"; };
-		2EE3CC781F172523005A20E0 /* XSGravityCollisionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSGravityCollisionView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +109,6 @@
 			children = (
 				2EE3CC231F14CCD0005A20E0 /* AppDelegate.h */,
 				2EE3CC241F14CCD0005A20E0 /* AppDelegate.m */,
-				2EE3CC771F172523005A20E0 /* XSGravityCollisionView.h */,
-				2EE3CC781F172523005A20E0 /* XSGravityCollisionView.m */,
 				2EE3CC261F14CCD0005A20E0 /* ViewController.h */,
 				2EE3CC271F14CCD0005A20E0 /* ViewController.m */,
 				2EE3CC531F14D07B005A20E0 /* BaseTableViewController.h */,
@@ -289,7 +284,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EE3CC791F172523005A20E0 /* XSGravityCollisionView.m in Sources */,
 				2EE3CC281F14CCD0005A20E0 /* ViewController.m in Sources */,
 				2EE3CC251F14CCD0005A20E0 /* AppDelegate.m in Sources */,
 				2EE3CC551F14D07B005A20E0 /* BaseTableViewController.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import "TableViewAnimationKit.h"
-#import "XSGravityCollisionView.h"
+
 
 #define XS_SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define XS_SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
@@ -203,12 +203,5 @@
     }
 }
 
-+ (void)centerPointShowAnimationWithTableView:(UITableView *)tableView {
-    
-    
-}
-+ (void)flipCellAnimationWithTableView:(UITableView *)tableView {
-    
-}
 
 @end
