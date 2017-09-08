@@ -1,3 +1,27 @@
+
+
+
+
+## Code Example
+
+```
++ (void)moveAnimationWithTableView:(UITableView *)tableView {
+
+NSArray *cells = tableView.visibleCells;
+for (int i = 0; i < cells.count; i++) {
+CGFloat totalTime = 0.4;
+UITableViewCell *cell = [tableView.visibleCells objectAtIndex:i];
+cell.transform = CGAffineTransformMakeTranslation(-XS_SCREEN_WIDTH, 0);
+[UIView animateWithDuration:0.4 delay:i*(totalTime/cells.count) usingSpringWithDamping:0.7 initialSpringVelocity:1/0.7 options:UIViewAnimationOptionCurveEaseIn animations:^{
+cell.transform = CGAffineTransformIdentity;
+} completion:^(BOOL finished) {
+
+}];
+}
+}
+```
+
+## Show
 ![2017-09-05 18_41_31.gif](http://upload-images.jianshu.io/upload_images/1819750-5969d06fc5f0b1ad.gif?imageMogr2/auto-orient/strip)
 
 
