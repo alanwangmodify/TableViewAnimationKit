@@ -20,6 +20,6 @@ typedef NS_ENUM(NSInteger,XSTableViewAnimationType){
     XSTableViewAnimationTypeShrinkToTop,
     XSTableViewAnimationTypeLayDown,
     XSTableViewAnimationTypeRote,
-}
+};
 
 #endif /* TableViewAnimationKitConfig_h */
