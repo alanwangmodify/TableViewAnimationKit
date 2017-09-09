@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "TableViewAnimationKitConfig.h"
 
 @interface TableViewAnimationKit : NSObject<UICollisionBehaviorDelegate>
+
+
++ (void)showWithAnimationType:(XSTableViewAnimationType)animationType tableView:(UITableView *)tableView;
 
 + (void)moveAnimationWithTableView:(UITableView *)tableView;
 + (void)alphaAnimationWithTableView:(UITableView *)tableView;

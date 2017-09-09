@@ -92,41 +92,8 @@
 
 
 - (void)starAnimationWithTableView:(UITableView *)tableView {
-    switch (self.index) {
-        case 0:
-            [TableViewAnimationKit springListAnimationWithTableView:tableView];
-            break;
-        case 1:
-            [TableViewAnimationKit shakeAnimationWithTableView:tableView];
-            break;
-        case 2:
-            [TableViewAnimationKit fallAnimationWithTableView:tableView];
-            break;
-        case 3:
-            [TableViewAnimationKit alphaAnimationWithTableView:tableView];
-            break;
-        case 4:
-            [TableViewAnimationKit overTurnAnimationWithTableView:tableView];
-            break;
-        case 5:
-            [TableViewAnimationKit toTopAnimationWithTableView:tableView];
-            break;
-        case 6:
-            [TableViewAnimationKit layDownAnimationWithTableView:tableView];
-            break;
-        case 7:
-            [TableViewAnimationKit shrinkToTopAnimationWithTableView:tableView];
-            break;
-        case 8:
-            [TableViewAnimationKit roteAnimationWithTableView:tableView];
-            break;
-        case 9:
-            [TableViewAnimationKit moveAnimationWithTableView:tableView];
-            break;
-        default:
-            [TableViewAnimationKit moveAnimationWithTableView:tableView];
-            break;
-    }
+    
+    [TableViewAnimationKit showWithAnimationType:self.index tableView:tableView];
 }
 
 - (void)didReceiveMemoryWarning {

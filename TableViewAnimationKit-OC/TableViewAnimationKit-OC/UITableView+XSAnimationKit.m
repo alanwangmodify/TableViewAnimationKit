@@ -7,7 +7,12 @@
 //
 
 #import "UITableView+XSAnimationKit.h"
+#import "TableViewAnimationKit.h"
 
 @implementation UITableView (XSAnimationKit)
+
+- (void)xs_showTableViewAnimationWithType:(XSTableViewAnimationType)animationType{
+    [TableViewAnimationKit showWithAnimationType:animationType tableView:self];
+}
 
 @end

@@ -10,7 +10,7 @@
 #define TableViewAnimationKitConfig_h
 
 typedef NS_ENUM(NSInteger,XSTableViewAnimationType){
-    XSTableViewAnimationTypeMove = 1,
+    XSTableViewAnimationTypeMove = 0,
     XSTableViewAnimationTypeAlpha,
     XSTableViewAnimationTypeFall,
     XSTableViewAnimationTypeShake,
