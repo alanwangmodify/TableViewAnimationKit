@@ -112,7 +112,7 @@
             [TableViewAnimationKit toTopAnimationWithTableView:tableView];
             break;
         case 6:
-            [TableViewAnimationKit layDonwAnimationWithTableView:tableView];
+            [TableViewAnimationKit layDownAnimationWithTableView:tableView];
             break;
         case 7:
             [TableViewAnimationKit shrinkToTopAnimationWithTableView:tableView];

@@ -7,6 +7,8 @@
 //
 
 #import "TableViewAnimationKit.h"
+#import <objc/runtime.h>
+#import <objc/message.h>
 
 
 #define XS_SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
@@ -14,10 +16,29 @@
 
 @interface TableViewAnimationKit ()
 
+
+
 @end
 
 @implementation TableViewAnimationKit
 
+
++ (void)showWithAnimation {
+    
+    unsigned int count = 0;
+    Method *methodlist = class_copyMethodList([TableViewAnimationKit class], &count);
+    int tag= 0;
+    for (int i = 0; i < count; i++) {
+        Method method = methodlist[i];
+        SEL selector = method_getName(method);
+        NSString *methodName = NSStringFromSelector(selector);
+        if ([methodName rangeOfString:@"AnimationWithTableView"].location != NSNotFound) {
+            tag++;
+            
+        }
+    }
+    free(methodlist);
+}
 
 + (void)moveAnimationWithTableView:(UITableView *)tableView {
     
@@ -153,7 +174,7 @@
     }
 }
 
-+ (void)layDonwAnimationWithTableView:(UITableView *)tableView {
++ (void)layDownAnimationWithTableView:(UITableView *)tableView {
     NSArray *cells = tableView.visibleCells;
     NSMutableArray *rectArr = [[NSMutableArray alloc] init];
     for (int i = 0; i < cells.count; i++) {

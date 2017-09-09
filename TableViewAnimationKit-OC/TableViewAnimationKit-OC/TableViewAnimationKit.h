@@ -19,7 +19,7 @@
 + (void)toTopAnimationWithTableView:(UITableView *)tableView;
 + (void)springListAnimationWithTableView:(UITableView *)tableView;
 + (void)shrinkToTopAnimationWithTableView:(UITableView *)tableView;
-+ (void)layDonwAnimationWithTableView:(UITableView *)tableView;
++ (void)layDownAnimationWithTableView:(UITableView *)tableView;
 + (void)roteAnimationWithTableView:(UITableView *)tableView;
 
 @end
