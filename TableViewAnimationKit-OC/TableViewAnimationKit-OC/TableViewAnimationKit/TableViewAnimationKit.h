@@ -8,8 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "TableViewAnimationKitConfig.h"
 
 @interface TableViewAnimationKit : NSObject<UICollisionBehaviorDelegate>
+
+
+/**
+ class method to show the tableView animation
+
+ @param animationType : animation type
+ @param tableView : the tableView to show animation
+ */
++ (void)showWithAnimationType:(XSTableViewAnimationType)animationType tableView:(UITableView *)tableView;
 
 + (void)moveAnimationWithTableView:(UITableView *)tableView;
 + (void)alphaAnimationWithTableView:(UITableView *)tableView;
@@ -19,7 +29,7 @@
 + (void)toTopAnimationWithTableView:(UITableView *)tableView;
 + (void)springListAnimationWithTableView:(UITableView *)tableView;
 + (void)shrinkToTopAnimationWithTableView:(UITableView *)tableView;
-+ (void)layDonwAnimationWithTableView:(UITableView *)tableView;
++ (void)layDownAnimationWithTableView:(UITableView *)tableView;
 + (void)roteAnimationWithTableView:(UITableView *)tableView;
 
 @end
