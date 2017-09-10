@@ -12,7 +12,7 @@
 @interface UITableView (XSAnimationKit)
 
 /**
- show the tableView animation
+ show the tableView animation 
  
  @param animationType type of animation to show TableView
  */

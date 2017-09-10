@@ -7,7 +7,7 @@
 //
 
 #import "BaseTableViewController.h"
-#import "TableViewAnimationKit.h"
+#import "TableViewAnimationKitHeaders.h"
 
 @interface BaseTableViewController ()<UITableViewDelegate,UITableViewDataSource>
 
