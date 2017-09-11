@@ -25,18 +25,6 @@
 
 + (void)showWithAnimationType:(XSTableViewAnimationType)animationType tableView:(UITableView *)tableView{
 
-    
-    switch (animationType) {
-        case XSTableViewAnimationTypeMove:{
-            
-        }
-            break;
-            
-        default:
-            break;
-    }
-    
-    
     unsigned int count = 0;
 
     
@@ -47,6 +35,7 @@
         Method method = methodlist[i];
         SEL selector = method_getName(method);
         NSString *methodName = NSStringFromSelector(selector);
+
         if ([methodName rangeOfString:@"AnimationWithTableView"].location != NSNotFound) {
             
             if (tag == animationType) {
