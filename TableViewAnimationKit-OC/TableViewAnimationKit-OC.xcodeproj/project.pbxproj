@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		2EC22F981F67DA9000B9E1D5 /* OCLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2EC22F9B1F67DA9000B9E1D5 /* Build configuration list for PBXAggregateTarget "OCLint" */;
+			buildPhases = (
+				2EC22F9C1F67DA9900B9E1D5 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = OCLint;
+			productName = OCLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		2EE3CC221F14CCD0005A20E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3CC211F14CCD0005A20E0 /* main.m */; };
 		2EE3CC251F14CCD0005A20E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3CC241F14CCD0005A20E0 /* AppDelegate.m */; };
@@ -232,6 +246,11 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = com.cn.fql;
 				TargetAttributes = {
+					2EC22F981F67DA9000B9E1D5 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = GD7D5R7GD4;
+						ProvisioningStyle = Automatic;
+					};
 					2EE3CC1C1F14CCD0005A20E0 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = BCNM7N8W68;
@@ -265,6 +284,7 @@
 				2EE3CC1C1F14CCD0005A20E0 /* TableViewAnimationKit-OC */,
 				2EE3CC351F14CCD0005A20E0 /* TableViewAnimationKit-OCTests */,
 				2EE3CC401F14CCD0005A20E0 /* TableViewAnimationKit-OCUITests */,
+				2EC22F981F67DA9000B9E1D5 /* OCLint */,
 			);
 		};
 /* End PBXProject section */
@@ -295,6 +315,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EC22F9C1F67DA9900B9E1D5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "source ~/.bash_profile\ncd ${SRCROOT}\nxcodebuild clean\nxcodebuild | tee xcodebuild.log\nxcodebuild | xcpretty -r json-compilation-database --output compile_commands.json\n-e Vendor \\\n-e Pods \\\n-- \\\n-max-priority-1 100000 \\\n-max-priority-2 100000 \\\n-max-priority-3 100000 \\\n-report-type xcode \\\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2EE3CC191F14CCD0005A20E0 /* Sources */ = {
@@ -361,6 +397,22 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2EC22F991F67DA9000B9E1D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = GD7D5R7GD4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2EC22F9A1F67DA9000B9E1D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = GD7D5R7GD4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		2EE3CC481F14CCD0005A20E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -529,6 +581,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2EC22F9B1F67DA9000B9E1D5 /* Build configuration list for PBXAggregateTarget "OCLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EC22F991F67DA9000B9E1D5 /* Debug */,
+				2EC22F9A1F67DA9000B9E1D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		2EE3CC181F14CCD0005A20E0 /* Build configuration list for PBXProject "TableViewAnimationKit-OC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
