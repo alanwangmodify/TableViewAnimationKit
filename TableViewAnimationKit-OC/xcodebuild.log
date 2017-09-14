@@ -1,9 +1,0 @@
-Build settings from command line:
-    TOOLCHAINS = com.apple.dt.toolchain.XcodeDefault
-
-=== BUILD TARGET TableViewAnimationKit-OC OF PROJECT TableViewAnimationKit-OC WITH THE DEFAULT CONFIGURATION (Release) ===
-
-Check dependencies
-TableViewAnimationKit-OC requires a provisioning profile. Select a provisioning profile for the "Release" build configuration in the project editor.
-Code signing is required for product type 'Application' in SDK 'iOS 10.3'
-

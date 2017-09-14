@@ -23,8 +23,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    int i;
+    
 
     _titles = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10"];
+    if (_titles) {
+    }else{
+        
+    }
+        
     [self.view addSubview:self.tableView];
     
 }

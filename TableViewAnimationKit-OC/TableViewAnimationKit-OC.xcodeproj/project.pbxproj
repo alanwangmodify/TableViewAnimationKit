@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		2EC22F981F67DA9000B9E1D5 /* OCLint */ = {
+		2EC2335A1F6910BB00B9E1D5 /* OCLint */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 2EC22F9B1F67DA9000B9E1D5 /* Build configuration list for PBXAggregateTarget "OCLint" */;
+			buildConfigurationList = 2EC2335B1F6910BB00B9E1D5 /* Build configuration list for PBXAggregateTarget "OCLint" */;
 			buildPhases = (
-				2EC22F9C1F67DA9900B9E1D5 /* ShellScript */,
+				2EC2335E1F6910BF00B9E1D5 /* Run Script */,
 			);
 			dependencies = (
 			);
@@ -191,6 +191,7 @@
 				2EE3CC191F14CCD0005A20E0 /* Sources */,
 				2EE3CC1A1F14CCD0005A20E0 /* Frameworks */,
 				2EE3CC1B1F14CCD0005A20E0 /* Resources */,
+				2EC2334B1F68DA2C00B9E1D5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -246,14 +247,14 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = com.cn.fql;
 				TargetAttributes = {
-					2EC22F981F67DA9000B9E1D5 = {
+					2EC2335A1F6910BB00B9E1D5 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = GD7D5R7GD4;
 						ProvisioningStyle = Automatic;
 					};
 					2EE3CC1C1F14CCD0005A20E0 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = BCNM7N8W68;
+						DevelopmentTeam = NUJ39R3X5E;
 						ProvisioningStyle = Manual;
 					};
 					2EE3CC351F14CCD0005A20E0 = {
@@ -284,7 +285,7 @@
 				2EE3CC1C1F14CCD0005A20E0 /* TableViewAnimationKit-OC */,
 				2EE3CC351F14CCD0005A20E0 /* TableViewAnimationKit-OCTests */,
 				2EE3CC401F14CCD0005A20E0 /* TableViewAnimationKit-OCUITests */,
-				2EC22F981F67DA9000B9E1D5 /* OCLint */,
+				2EC2335A1F6910BB00B9E1D5 /* OCLint */,
 			);
 		};
 /* End PBXProject section */
@@ -317,7 +318,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2EC22F9C1F67DA9900B9E1D5 /* ShellScript */ = {
+		2EC2334B1F68DA2C00B9E1D5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -328,7 +329,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "source ~/.bash_profile\ncd ${SRCROOT}\nxcodebuild clean\nxcodebuild | tee xcodebuild.log\nxcodebuild | xcpretty -r json-compilation-database --output compile_commands.json\n-e Vendor \\\n-e Pods \\\n-- \\\n-max-priority-1 100000 \\\n-max-priority-2 100000 \\\n-max-priority-3 100000 \\\n-report-type xcode \\\n";
+			shellScript = "";
+		};
+		2EC2335E1F6910BF00B9E1D5 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# import path\nexport PATH=${PATH}:/usr/local/bin\n# import what we have in bash_profile\nsource ~/.bash_profile\n\n# oclint\nworkspaceExt=\".xcworkspace\"\ntempPath=\"\"\nproject_path=$(pwd)\nproject_name=$(ls | grep xcodeproj | awk -F.xcodeproj '{print $1}')\n\n# 更新第三方库\nif [ -f Podfile ]; then\necho \"==========pod update=========\"\n#pod update\nfi\n\n# find .xcworkspace\nfor workspacePath in `find ${project_path} -name \"$project_name$workspaceExt\" -print`\ndo\ntempPath=${workspacePath}\nbreak\ndone\necho \"===========oclint==========\"\nif [ \"$tempPath\" == \"\" ];then\n# oclint clean\nxctool  -project ${project_name}.xcodeproj \\\n-scheme ${project_name} \\\n-reporter json-compilation-database:compile_commands.json \\\nclean\necho \"===========oclint=project=clean=done=========\"\n# build\nxctool  -project ${project_name}.xcodeproj \\\n-scheme ${project_name} \\\n-reporter json-compilation-database:compile_commands.json \\\nbuild\necho \"===========oclint=project=build=done=========\"\nelse\n# oclint clean\nxctool  -workspace ${project_name}.xcworkspace \\\n-scheme ${project_name} \\\n-reporter json-compilation-database:compile_commands.json \\\nclean\necho \"===========oclint=workspace=clean=done=========\"\n# build\nxctool  -workspace ${project_name}.xcworkspace \\\n-scheme ${project_name} \\\n-reporter json-compilation-database:compile_commands.json \\\nbuild\necho \"===========oclint=workspace=build=done=========\"\nfi\n\n# 生成报表\noclint-json-compilation-database -v \\\n-e Pods \\\noclint_args -- -report-type html -o oclintReport.html \\\n-disable-rule ObjCAssignIvarOutsideAccessors \\\n-rc=MINIMUM_CASES_IN_SWITCH=3 \\\n-rc=LONG_VARIABLE_NAME=20 \\\n-disable-rule ShortVariableName \\\n-rc=CYCLOMATIC_COMPLEXITY=10 \\\n-rc=LONG_CLASS=700 \\\n-rc=LONG_LINE=200 \\\n-rc=LONG_METHOD=80 \\\n-rc=NCSS_METHOD=40 \\\n-rc=NESTED_BLOCK_DEPTH=5 \\\n-rc=TOO_MANY_FIELDS=20 \\\n-rc=TOO_MANY_METHODS=30 \\\n-rc=TOO_MANY_PARAMETERS=6\n\n# 删除 compile_commands.json 可能会很大\njsonPath=$project_path/\"compile_commands.json\"\necho ${jsonPath}\nopen oclintReport.html\nexit";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -397,7 +412,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2EC22F991F67DA9000B9E1D5 /* Debug */ = {
+		2EC2335C1F6910BB00B9E1D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = GD7D5R7GD4;
@@ -405,7 +420,7 @@
 			};
 			name = Debug;
 		};
-		2EC22F9A1F67DA9000B9E1D5 /* Release */ = {
+		2EC2335D1F6910BB00B9E1D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = GD7D5R7GD4;
@@ -508,13 +523,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = BCNM7N8W68;
+				DEVELOPMENT_TEAM = NUJ39R3X5E;
 				INFOPLIST_FILE = "TableViewAnimationKit-OC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.tql.TableViewAnimationKit-OC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0616ec2d-25cc-413b-8e7c-b087a7a79599";
+				PROVISIONING_PROFILE = "30d565c7-f97b-4bfa-8793-27b6f3e61ed7";
 				PROVISIONING_PROFILE_SPECIFIER = "XC Ad Hoc: *";
 			};
 			name = Debug;
@@ -523,12 +538,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = NUJ39R3X5E;
 				INFOPLIST_FILE = "TableViewAnimationKit-OC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.tql.TableViewAnimationKit-OC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "30d565c7-f97b-4bfa-8793-27b6f3e61ed7";
+				PROVISIONING_PROFILE_SPECIFIER = "XC Ad Hoc: *";
 			};
 			name = Release;
 		};
@@ -581,11 +599,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2EC22F9B1F67DA9000B9E1D5 /* Build configuration list for PBXAggregateTarget "OCLint" */ = {
+		2EC2335B1F6910BB00B9E1D5 /* Build configuration list for PBXAggregateTarget "OCLint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2EC22F991F67DA9000B9E1D5 /* Debug */,
-				2EC22F9A1F67DA9000B9E1D5 /* Release */,
+				2EC2335C1F6910BB00B9E1D5 /* Debug */,
+				2EC2335D1F6910BB00B9E1D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
