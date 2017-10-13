@@ -6,20 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		2EC2335A1F6910BB00B9E1D5 /* OCLint */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 2EC2335B1F6910BB00B9E1D5 /* Build configuration list for PBXAggregateTarget "OCLint" */;
-			buildPhases = (
-				2EC2335E1F6910BF00B9E1D5 /* Run Script */,
-			);
-			dependencies = (
-			);
-			name = OCLint;
-			productName = OCLint;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		2EE3CC221F14CCD0005A20E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3CC211F14CCD0005A20E0 /* main.m */; };
 		2EE3CC251F14CCD0005A20E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3CC241F14CCD0005A20E0 /* AppDelegate.m */; };
@@ -247,11 +233,6 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = com.cn.fql;
 				TargetAttributes = {
-					2EC2335A1F6910BB00B9E1D5 = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = GD7D5R7GD4;
-						ProvisioningStyle = Automatic;
-					};
 					2EE3CC1C1F14CCD0005A20E0 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = NUJ39R3X5E;
@@ -285,7 +266,6 @@
 				2EE3CC1C1F14CCD0005A20E0 /* TableViewAnimationKit-OC */,
 				2EE3CC351F14CCD0005A20E0 /* TableViewAnimationKit-OCTests */,
 				2EE3CC401F14CCD0005A20E0 /* TableViewAnimationKit-OCUITests */,
-				2EC2335A1F6910BB00B9E1D5 /* OCLint */,
 			);
 		};
 /* End PBXProject section */
@@ -330,20 +310,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "";
-		};
-		2EC2335E1F6910BF00B9E1D5 /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# import path\nexport PATH=${PATH}:/usr/local/bin\n# import what we have in bash_profile\nsource ~/.bash_profile\n\n# oclint\nworkspaceExt=\".xcworkspace\"\ntempPath=\"\"\nproject_path=$(pwd)\nproject_name=$(ls | grep xcodeproj | awk -F.xcodeproj '{print $1}')\n\n# 更新第三方库\nif [ -f Podfile ]; then\necho \"==========pod update=========\"\n#pod update\nfi\n\n# find .xcworkspace\nfor workspacePath in `find ${project_path} -name \"$project_name$workspaceExt\" -print`\ndo\ntempPath=${workspacePath}\nbreak\ndone\necho \"===========oclint==========\"\nif [ \"$tempPath\" == \"\" ];then\n# oclint clean\nxctool  -project ${project_name}.xcodeproj \\\n-scheme ${project_name} \\\n-reporter json-compilation-database:compile_commands.json \\\nclean\necho \"===========oclint=project=clean=done=========\"\n# build\nxctool  -project ${project_name}.xcodeproj \\\n-scheme ${project_name} \\\n-reporter json-compilation-database:compile_commands.json \\\nbuild\necho \"===========oclint=project=build=done=========\"\nelse\n# oclint clean\nxctool  -workspace ${project_name}.xcworkspace \\\n-scheme ${project_name} \\\n-reporter json-compilation-database:compile_commands.json \\\nclean\necho \"===========oclint=workspace=clean=done=========\"\n# build\nxctool  -workspace ${project_name}.xcworkspace \\\n-scheme ${project_name} \\\n-reporter json-compilation-database:compile_commands.json \\\nbuild\necho \"===========oclint=workspace=build=done=========\"\nfi\n\n# 生成报表\noclint-json-compilation-database -v \\\n-e Pods \\\noclint_args -- -report-type html -o oclintReport.html \\\n-disable-rule ObjCAssignIvarOutsideAccessors \\\n-rc=MINIMUM_CASES_IN_SWITCH=3 \\\n-rc=LONG_VARIABLE_NAME=20 \\\n-disable-rule ShortVariableName \\\n-rc=CYCLOMATIC_COMPLEXITY=10 \\\n-rc=LONG_CLASS=700 \\\n-rc=LONG_LINE=200 \\\n-rc=LONG_METHOD=80 \\\n-rc=NCSS_METHOD=40 \\\n-rc=NESTED_BLOCK_DEPTH=5 \\\n-rc=TOO_MANY_FIELDS=20 \\\n-rc=TOO_MANY_METHODS=30 \\\n-rc=TOO_MANY_PARAMETERS=6\n\n# 删除 compile_commands.json 可能会很大\njsonPath=$project_path/\"compile_commands.json\"\necho ${jsonPath}\nopen oclintReport.html\nexit";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -412,22 +378,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2EC2335C1F6910BB00B9E1D5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = GD7D5R7GD4;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		2EC2335D1F6910BB00B9E1D5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = GD7D5R7GD4;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		2EE3CC481F14CCD0005A20E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -599,14 +549,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2EC2335B1F6910BB00B9E1D5 /* Build configuration list for PBXAggregateTarget "OCLint" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2EC2335C1F6910BB00B9E1D5 /* Debug */,
-				2EC2335D1F6910BB00B9E1D5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
 		2EE3CC181F14CCD0005A20E0 /* Build configuration list for PBXProject "TableViewAnimationKit-OC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

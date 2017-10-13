@@ -17,4 +17,6 @@
  @param animationType type of animation to show TableView
  */
 - (void)xs_showTableViewAnimationWithType:(XSTableViewAnimationType )animationType;
+
+
 @end
