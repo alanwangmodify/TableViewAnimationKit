@@ -11,6 +11,7 @@
 
 typedef NS_ENUM(NSInteger,XSTableViewAnimationType){
     XSTableViewAnimationTypeMove = 0,
+    XSTableViewAnimationTypeMoveSpring = 0,
     XSTableViewAnimationTypeAlpha,
     XSTableViewAnimationTypeFall,
     XSTableViewAnimationTypeShake,

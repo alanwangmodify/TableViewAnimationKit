@@ -22,6 +22,7 @@
 + (void)showWithAnimationType:(XSTableViewAnimationType)animationType tableView:(UITableView *)tableView;
 
 + (void)moveAnimationWithTableView:(UITableView *)tableView;
++ (void)moveSpringAnimationWithTableView:(UITableView *)tableView;
 + (void)alphaAnimationWithTableView:(UITableView *)tableView;
 + (void)fallAnimationWithTableView:(UITableView *)tableView;
 + (void)shakeAnimationWithTableView:(UITableView *)tableView;

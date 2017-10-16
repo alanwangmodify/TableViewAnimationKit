@@ -24,10 +24,6 @@
 
 
 + (void)showWithAnimationType:(XSTableViewAnimationType)animationType tableView:(UITableView *)tableView{
-
-    if (1) {
-    
-    }
     unsigned int count = 0;
 
     //Get Class Method
@@ -54,6 +50,20 @@
     
     NSArray *cells = tableView.visibleCells;
     for (int i = 0; i < cells.count; i++) {
+        CGFloat totalTime = 0.3;
+        UITableViewCell *cell = [tableView.visibleCells objectAtIndex:i];
+        cell.transform = CGAffineTransformMakeTranslation(-XS_SCREEN_WIDTH, 0);
+        [UIView animateWithDuration:0.25 delay:i*(totalTime/cells.count) options:0 animations:^{
+            cell.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            
+        }];
+        
+    }
+}
++ (void)moveSpringAnimationWithTableView:(UITableView *)tableView {
+    NSArray *cells = tableView.visibleCells;
+    for (int i = 0; i < cells.count; i++) {
         CGFloat totalTime = 0.4;
         UITableViewCell *cell = [tableView.visibleCells objectAtIndex:i];
         cell.transform = CGAffineTransformMakeTranslation(-XS_SCREEN_WIDTH, 0);
@@ -64,7 +74,6 @@
         }];
     }
 }
-
 + (void)alphaAnimationWithTableView:(UITableView *)tableView {
     
     NSArray *cells = tableView.visibleCells;
