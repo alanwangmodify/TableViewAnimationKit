@@ -17,7 +17,6 @@
 @interface TableViewAnimationKit ()
 
 
-
 @end
 
 @implementation TableViewAnimationKit
